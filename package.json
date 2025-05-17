@@ -1,0 +1,24 @@
+{
+  "name": "gamified-tracker",
+  "version": "1.0.0",
+  "description": "A gamified work tracker application.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gamification",
+    "tracker",
+    "chores"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.19.2",
+    "gamified-tracker": "file:",
+    "papaparse": "^5.4.1",
+    "uuid": "^9.0.1"
+  }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Majdoors⚒️👷🏻</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div id="appContainer">
+       <div id="loginSection" class="section active">
+    <h2><i class="fas fa-sign-in-alt"></i> Daily Majdoors⚒️👷🏻</h2>
+
+    <!-- 🎞️ Giphy Container -->
+    <div style="text-align: center; margin-bottom: 15px;">
+        <img id="loginGiphy" src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="Motivational Giphy" style="max-width: 100%; max-height: 200px; border-radius: 10px;" />
+    </div>
+
+    <form id="loginForm">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" required>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" required>
+        <button type="submit">Login</button>
+    </form>
+    <p id="loginMessage" class="message"></p>
+</div>
+
+        <div id="mainAppInterface" class="section hidden">
+            <header>
+                <h1>Daily Majdoors⚒️👷🏻</h1>
+                <div id="userInfo" class="user-profile">
+                    <h3 id="currentUserNameDisplay"></h3>
+                    <img id="currentUserGiphy" src="" alt="User Character">
+                    <button id="logoutButton"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </header>
+
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab(event, 'dashboardTab')">Dashboard</button>
+                <button class="tab-button" onclick="openTab(event, 'logWorkTab')">Log Work</button>
+                <button class="tab-button" onclick="openTab(event, 'pendingApprovalTab')">Pending My Approval</button>
+                <button class="tab-button" onclick="openTab(event, 'mySubmissionsTab')">My Submissions</button>
+                <button class="tab-button" onclick="openTab(event, 'profileTab')">My Profile</button>
+            </div>
+
+            <div id="dashboardTab" class="tab-content active">
+                <h2><i class="fas fa-tachometer-alt"></i> Monthly Leaderboard & Progress</h2>
+                <div id="leaderboardContent"></div>
+                <h2><i class="fas fa-history"></i> All Approved Work Log</h2>
+                <label for="filterMonthYear">Filter by Month (YYYY-MM):</label>
+                <input type="month" id="filterMonthYear">
+                <div class="table-wrapper">
+
+                    <table id="allApprovedTasksTable">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Task</th>
+                                <th>Date</th>
+                                <th>Points</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="logWorkTab" class="tab-content">
+                <h2><i class="fas fa-pencil-alt"></i> Add New Work Entry</h2>
+                <form id="taskForm">
+                    <label for="taskWorkType">Task:</label>
+                    <select id="taskWorkType" required>
+                        <option value="Cooking">Cooking (10 points)</option>
+                        <option value="Washing utensils">Washing Utensils (3 points)</option>
+                        <option value="Cleaning floor with broom">Cleaning Floor - Broom (3 points)</option>
+                        <option value="Cleaning floor with mob">Cleaning Floor - Mop (5 points)</option>
+                        <option value="Cleaning the toilet">Cleaning Toilet (8 points)</option>
+                    </select>
+                    <label for="taskEntryDate">Date Performed:</label>
+                    <input type="date" id="taskEntryDate" required>
+                    <label for="taskNotes">Notes (Optional):</label>
+                    <textarea id="taskNotes" rows="2"></textarea>
+                    <button type="submit">Submit for Approval</button>
+                </form>
+                <p id="taskFormMessage" class="message"></p>
+            </div>
+
+            <div id="pendingApprovalTab" class="tab-content">
+                <h2><i class="fas fa-hourglass-half"></i> Tasks Pending Your Approval</h2>
+                <div class="table-wrapper">
+
+                    <table id="pendingApprovalsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Submitted By</th>
+                                <th>Task</th>
+                                <th>Date</th>
+                                <th>Points</th>
+                                <th>Notes</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+
+                    </table>
+                </div>
+            </div>
+
+            <div id="mySubmissionsTab" class="tab-content">
+                <h2><i class="fas fa-tasks"></i> My Submitted Tasks</h2>
+                <div class="table-wrapper">
+                    <table id="myTasksTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Task</th>
+                                <th>Date</th>
+                                <th>Points</th>
+                                <th>Status</th>
+                                <th>Approved By</th>
+                                <th>Notes</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="profileTab" class="tab-content">
+                <h2><i class="fas fa-user-cog"></i> My Profile</h2>
+                <div class="profile-section">
+                    <h4>Update Character</h4>
+                    <img id="profileGiphyPreview" src="" alt="Current Giphy"
+                        style="max-width: 150px; display: block; margin-bottom: 10px;">
+                    <form id="giphyForm">
+                        <label for="profileGiphyLink">New Giphy Link:</label>
+                        <input type="url" id="profileGiphyLink" placeholder="Paste Giphy URL">
+                        <button type="submit">Update Giphy</button>
+                    </form>
+                    <p id="giphyFormMessage" class="message"></p>
+                </div>
+                <div class="profile-section">
+                    <h4>Change Password</h4>
+                    <form id="changePasswordForm">
+                        <label for="oldPassword">Old Password:</label>
+                        <input type="password" id="oldPassword" required>
+                        <label for="newPassword">New Password:</label>
+                        <input type="password" id="newPassword" required>
+                        <label for="confirmNewPassword">Confirm New Password:</label>
+                        <input type="password" id="confirmNewPassword" required>
+                        <button type="submit">Change Password</button>
+                    </form>
+                    <p id="passwordFormMessage" class="message"></p>
+                </div>
+            </div>
+
+            <div id="editModal" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeEditModal()">&times;</span>
+                    <h3>Edit Task Entry</h3>
+                    <form id="editTaskForm">
+                        <input type="hidden" id="editEntryId">
+                        <label for="editTaskWorkType">Task:</label>
+                        <select id="editTaskWorkType" required></select>
+                        <label for="editTaskEntryDate">Date Performed:</label>
+                        <input type="date" id="editTaskEntryDate" required>
+                        <label for="editTaskNotes">Notes (Optional):</label>
+                        <textarea id="editTaskNotes" rows="2"></textarea>
+                        <button type="submit">Save Changes</button>
+                    </form>
+                    <p id="editTaskFormMessage" class="message"></p>
+                </div>
+            </div>
+
+
+
+        </div>
+        <script src="client.js"></script>
+</body>
+
+</html>
