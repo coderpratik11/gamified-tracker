@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
     "express": "^4.19.2",
     "gamified-tracker": "file:",
     "papaparse": "^5.4.1",

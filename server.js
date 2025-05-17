@@ -2,7 +2,7 @@ const express = require('express');
 const Papa = require('papaparse');
 const fs = require('fs').promises;
 const path = require('path');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
