@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "bookmark-app-451020",
+  "private_key_id": "d809557770ea84cd515b83741c067a728b14e052",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCnImLmzWkVnIRm\natG+JpOnQAHDpZ0viVrf29cn7BUmPAm7gcujAEJc+eUdnUi4149PraqFZd93lFUY\n9/47csXczutNgDbNrh/loMoDGWMux4vFWcfQVCs1vIezq3wrRvMf7dxsvNHmWioj\nTkKYxrvxxKBaG3e/muEa79g+srpqFHFZU9rrc44e2C1rL8y6te8GUF0BA+Jrf7Am\n7JqDFmV1aR99ldONc5N6GHb8I9zxiKip051gCLGYL825PLWfbzoGcEwM0i8jwf+t\nHDes9ErnzutcVpvTqfELrS8oT2a1j+bP4CqKJAPKNZ7asF45wzLuEirh48MgU3Lu\nwIC980s3AgMBAAECggEAKnQimSveIH40Z2uEwX89DEPG7vJ3feau7aQDAAII0UB4\n3Gc42busH7/eQep82W7v2TZs1RuuasqD3ybHLkSWG+N3g6UoxpAPTB3OkoD1X6GS\nUFvg1Hs8ypaMBchubvPDt/2MexZvXsrSX0t2wSXiAaSHcrv9a+8kdNotnKd7kIwd\ns9n6QveEB5XDpvULcPeHss32eO90ZXCL7FAmdD6mMDvRqQGOlCzpc1U5iF/t/4Ai\nlsewFbOMHtkbS3YyxCbax8qIjz+ZN3doUCF0vvXmbZ27CphRwUqmv/Z7BemdB9ae\n+bT9+40Aw+ejQBumOLTGpGFgAX1JZe568rec4oZkKQKBgQDQyUPeh9RT/yiGVMVh\nO1fzMXPvnArpkqHzydxHWbcA/AdSxE8KuoSO1K2vI5fETN2D6arzeFO5feeJOqWl\npkIHpIQviIlGBCJiba09QDI8SDgXr1NNK36j+wRYB5QIuEQCctRrBPFsuUni3e+W\nXZphZEweBhdQrTY9VjQ26OQHrQKBgQDM7d/CH0jwuOrLG4KyJQFthFil0YM7W/c6\nKK9G5i8VQ1vF6fXbDRoFbTr42MlDyaai6gtukfq6J0X5WR8QLunjQIQiZQDTfEhY\nvsiSvS0BkyVTdpWIXJg9O0TSM2gUeZaGac9sp414V4vlNGSJmpJadnlKvgmTsaDN\nUEr32WhK8wKBgQDISVrPHbQlQ/AHNUkHplsPk9Ao+qNJP/4WlP24gKrayerojiNZ\nImZJcmKPUXCkwiv6AG2bFEIU/l/fuB/x0ZUkKcEYrD0rqomlrJr02CGYzJrqtakO\nrXvWKNYY8GQlHUc4phl59Ir5BqKHfOn6cB7J8OJIJwW0wgT3QDvktPMTHQKBgEXW\n/74JqXMYojQsIQOTZwQq6YdBeub89amlee7AveUSOrGdhYNs2KRm0IVEZHssuxSk\njNbW+0r73XYYMGT0iBNBxoZuQ7TPk1xjULnprO/vdPYX4OhDHkMn8tFsYZkwwuL2\nJpHSHH2Z4HxxuZ3Hxv77h2S4lUz3aWTva01Ck6+PAoGBAMLLr1gqmNuAlBmVuuQE\nuA5AbuHVqN2xkB3gYn+9d4THZOCxhzWKtZHaFjPVCztFfBEzetN9h40DWB2w9U6J\nJk9Z1IBjJuK363wSSNC28xEfK7G7FwtMOKcQSTs0OJ9/v5ZS7JeSfkEEY/6R2AfY\nV8nqGrbamg6/lpV/+oto3Scl\n-----END PRIVATE KEY-----\n",
+  "client_email": "gamified-tracker-sheets-api@bookmark-app-451020.iam.gserviceaccount.com",
+  "client_id": "117706510289030051419",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gamified-tracker-sheets-api%40bookmark-app-451020.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

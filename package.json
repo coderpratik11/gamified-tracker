@@ -19,6 +19,7 @@
     "bcryptjs": "^3.0.2",
     "express": "^4.19.2",
     "gamified-tracker": "file:",
+    "googleapis": "^148.0.0",
     "papaparse": "^5.4.1",
     "uuid": "^9.0.1"
   }
