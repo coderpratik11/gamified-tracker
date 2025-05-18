@@ -52,6 +52,7 @@ const editTaskFormMessage = document.getElementById('editTaskFormMessage');
 
 // Filter
 const filterMonthYearInput = document.getElementById('filterMonthYear');
+const filterLeaderBoardMonth = document.getElementById('filterLeaderBoardMonth');
 
 // --- API Helper ---
 async function apiRequest(endpoint, method = 'GET', body = null) {
@@ -136,12 +137,18 @@ async function initializeAppData() {
     filterMonthYearInput.value = `${year}-${month}`;
     filterMonthYearInput.addEventListener('change', renderAllApprovedTasks);
 
+    filterLeaderBoardMonth.value = `${year}-${month}`;
+    filterLeaderBoardMonth.addEventListener('change', renderLeaderboard);
+
 
     await fetchAllWorkData();
     // Fetch all users (minimal data) for leaderboard initially if needed, or derive from workdata submitters
     // For simplicity, we'll derive users for leaderboard from workData submitters and loggedInUser context
     // Or we could add an endpoint /api/users (that doesn't send password hashes)
 }
+
+
+
 
 async function fetchAllWorkData() {
     try {
@@ -374,7 +381,7 @@ function renderLeaderboard() {
     leaderboardContent.innerHTML = "";
     if (!allUsersForLeaderboard || !allWorkData) return;
 
-    const currentMonthFilter = filterMonthYearInput.value || new Date().toISOString().slice(0, 7); // Default to current month
+    const currentMonthFilter = filterLeaderBoardMonth.value || new Date().toISOString().slice(0, 7); // Default to current month
 
     allUsersForLeaderboard.forEach(user => {
         const userDiv = document.createElement('div');
