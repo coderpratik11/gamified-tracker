@@ -20,9 +20,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 const TASK_DEFINITIONS = {
     "Cooking": { points: 10, category: "Food" },
     "Washing utensils": { points: 3, category: "Washing utensils" },
-    "Cleaning floor with broom": { points: 3, category: "Cleaning room with broom" },
-    "Cleaning floor with mob": { points: 5, category: "Clean the room using mob" },
-    "Cleaning the toilet": { points: 8, category: "Cleaning the toilet" }
+    "Cleaning floor with broom": { points: 3, category: "Cleaning" },
+    "Cleaning floor with mob": { points: 5, category: "Cleaning" },
+    "Cleaning the toilet": { points: 8, category: "Cleaning the toilet" },
+    "Cooking help": { points: 3, category: "Food" },
+    "Throw the garbage": { points: 2, category: "Cleaning" },
+
 };
 
 // --- LOGIN ---
